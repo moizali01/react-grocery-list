@@ -8,6 +8,8 @@ function App() {
 
 	const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoppinglist')));
 
+	// const [items, setItems] = useState('');
+
 
 	// sets itemlist and saves it to local storage
 	const setAndSaveItems = (newItems) => {
@@ -64,6 +66,7 @@ function App() {
 				setSearch={setSearch}
 			/>
 			<Content
+			// items = {items}
 				items={items.filter(item => ((item.item).toLowerCase()).includes(search.toLowerCase()))}
 				// setItems = {setItems}
 				handleCheck={handleCheck}
